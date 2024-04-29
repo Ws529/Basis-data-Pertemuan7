@@ -42,14 +42,17 @@ create table Mahasiswa (
     );
 ```
 
-![alt text](ss/1.png)
+
+![ss1](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/03e20de6-f4a2-481a-a666-c4f2c28bd085)
 
 
 **Tampilkan hasil table :**
 
 `desc Mahasiswa;`
 
-![alt text](ss/2.png)
+![ss2](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/40377b1f-7698-45a3-b021-2d2115dd144c)
+
+
 
 **2. Buat script untuk table Dosen :**
 ```
@@ -59,13 +62,14 @@ create table Dosen (
     );
 ```
 
-![alt text](ss/3.png)
+![ss3](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/16d8a9be-fd1a-408f-8a86-d1d94d79ec26)
+
 
 **Tampilkan tabel :**
 
 `desc Dosen;`
+![ss4](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/4f584f75-3c53-4eb1-8737-80a3915c9029)
 
-![alt text](ss/4.png)
 
 **3. Buat script untuk Mata kuliah :**
 ```
@@ -75,14 +79,16 @@ create table Matakuliah (
     sks INT NOT NULL
     );
 ```
+![ss5](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/04c6ed4b-2e62-48ce-8017-5252079fc873)
 
-![alt text](ss/5.png)
+
 
 **Tampilkan table :**
 
 `desc Matakuliah;`
 
-![alt text](ss/6.png)
+![ss6](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/a411c0bc-e5de-4792-a209-e03060070f21)
+
 
 **4. Buat script untuk jadwal mengajar :**
 ```
@@ -97,14 +103,16 @@ create table JadwalMengajar (
     FOREIGN KEY (kd_mk) REFERENCES Matakuliah(kd_mk)
     ); 
 ```
+![ss7](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/05b8ef7f-c008-4467-9d61-b91252c980fb)
 
-![alt text](ss/7.png)
+
 
 **Tampilkan table :**
 
 `desc JadwalMengajar;`
 
-![alt text](ss/8.png)
+![ss8](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/3a0c2731-a3c2-4a5f-9241-0205740c05ba)
+
 
 **5. Buat script untuk KRSMahasiswa :**
 ```
@@ -120,14 +128,15 @@ CREATE TABLE KRSMahasiswa (
     FOREIGN KEY (kd_ds) REFERENCES Dosen(kd_ds)
     );
 ```
+![ss9](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/75d59953-7f4d-411e-8a2b-41ac4e1042f6)
 
-![alt text](ss/9.png)
 
 **Tampilkan table :**
 
 `desc KRSMahasiswa;`
 
-![alt text](ss/10.png)
+![ss10](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/672274cc-fc68-496f-90ef-bd2305e250eb)
+
 
 # Soal Latihan Praktikum
 
@@ -162,43 +171,50 @@ insert into Mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos
 -> (11223349,"anton sinaga","laki-laki","1988-03-10","","Cikarang","","","");
 ```
 
-![alt text](ss/11.png)
+![ss11](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/af48d668-3539-4387-a5d1-45dd82aa163c)
+
 
 **2. Menampilkan semua isi/record pada tabel bisa menggunakan kode berikut :**
 
 `select*from Mahasiswa;`
 
-![alt text](ss/12.png)
+![ss12](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/948435d8-f7b3-4999-b4db-6448800dd280)
+
 
 **3. Mengubah data tanggal lahir Mahasiswa yang bernama Ari menjadi : 1979-08-31 menggunakan kode berikut :**
 
 `update Mahasiswa set tgl_lahir='1979-08-31' where nim=11223344;`
 
-![alt text](ss/13.png)
+![ss13](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/f43c2082-9bf6-413c-ac05-07b19cec9f18)
+
 
 **4. Menampilkan satu baris / record data yang telah diubah tadi yaitu record dengan nama Ari saja dengan cara sebagai berikut :**
 
 `select*from Mahasiswa where nim=11223344;`
 
-![alt text](ss/14.png)
+![ss14](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/2f0a319b-ef85-46ee-b72b-5214452ffa85)
+
 
 **5. Menghapus Mahasiswa yang bernama Dina dengan cara sebagai berikut:**
 
 `delete from Mahasiswa where nim=11223346;`
 
-![alt text](ss/15.png)
+![ss15](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/3608d38d-5d94-485f-b7f9-fdd9abcdc7e5)
+
 
 **6. Menampilkan record atau data yang tanggal kelahirannya lebih dari atau sama dengan 1996-1-2 dengan cara sebagai berikut :**
 
 `select*from Mahasiswa where tgl_lahir<='1996-1-2';`
 
-![alt text](ss/16.png)
+![ss16](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/d2136905-c55e-4c0a-877f-c65d65a9755b)
+
 
 **7. Menampilkan semua Mahasiswa yang berasal dari Bekasi dan berjenis kelamin perempuan dengan cara sebagai berikut :**
 
 `select*from Mahasiswa where kota='bekasi' and jenis_kelamin='Perempuan';`
 
-![alt text](ss/17.png)
+![ss17](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/301d7ac1-4ffa-4f80-9748-1ed36c54dc4f)
+
 
 **8. Menampilkan semua Mahasiswa yang berasal dari Bekasi dengan kelamin laki-laki atau Mahasiswa yang berumur lebih dari 22 tahun dengan kelamin wanita dengan cara sebagai berikut :**
 ```
@@ -207,19 +223,22 @@ or tgl_lahir<='2002-4-22'
 and jenis_kelamin='Perempuan';
 ```
 
-![alt text](ss/18.png)
+![ss18](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/a031802b-7cda-45b0-a2cf-04a6eb0f9767)
+
 
 **9. Menampilkan data nama dan jalan Mahasiswa saja dari tabel tersebut dengan cara sebagai berikut :**
 
 `select nama, jalan from Mahasiswa;`
 
-![alt text](ss/19.png)
+![ss19](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/81b5d85a-40c0-4dd7-af97-3d04d38efffc)
+
 
 **10. Menampilkan data Mahasiswa terurut berdasarkan nama dengan cara sebagai berikut :**
 
 `select*from Mahasiswa -> order by nama asc;`
 
-![alt text](ss/20.png)
+![ss20](https://github.com/Ws529/Basis-data-Pertemuan7/assets/147570983/c39e71fe-67b7-44ff-bd8f-b34ea619941b)
+
 
 # Evaluasi dan Pertanyaan
 
@@ -234,7 +253,6 @@ and jenis_kelamin='Perempuan';
 `INSERT INTO biodata (nim, nama, alamat) VALUE ('312310451','fadzar','Bekasi'),
 ('312310487', 'thanos sinaga', 'Jakarta');
 
-![alt text](ss/21.png)
 
 **2. Menampilkan data :**
 
@@ -244,7 +262,6 @@ and jenis_kelamin='Perempuan';
 
 `SELECT*FROM biodata;`
 
-![alt text](ss/22.png)
 
 **3. Mengubah data :**
 
@@ -254,7 +271,6 @@ and jenis_kelamin='Perempuan';
 
 UPDATE biodata SET nama='udap', alamat='planet lain' WHERE nim='312310487';
 
-![alt text](ss/23.png)
 
 **4. Menghapus data :**
 
@@ -264,7 +280,6 @@ UPDATE biodata SET nama='udap', alamat='planet lain' WHERE nim='312310487';
 
 DELETE FROM biodata WHERE nim='312310487';
 
-![alt text](ss/24.png)
 
 ***Apa bedanya penggunaan BETWEEN dan penggunaan operator >= dan <= ?***
 
@@ -284,6 +299,4 @@ Dalam DML, pengguna dapat menggunakan perintah SQL (Structured Query Language) u
 
 ***Buat laporan praktikum yang berisi, langkah-langkah praktikum beserta screenshot yang sudah dilakukan dalam bentuk dokumen.***
 
-<img src=https://pngimg.com/uploads/google_drive/google_drive_PNG9.png width="110px" >
 
-- [Link Laporan Praktikum](https://docs.google.com/document/d/11nxeeY7RrJtV7LY4_I90JiMloq9qy-ov/edit?usp=drivesdk&rtpof=true&sd=true)
